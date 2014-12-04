@@ -126,6 +126,7 @@ alias ga="git add"
 alias gg="git lg"
 alias gd="git diff"
 alias gp="git push"
+alias gb="git branch"
 
 # File size
 alias fs="stat -f \"%z bytes\""
