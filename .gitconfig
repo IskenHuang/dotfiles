@@ -17,6 +17,7 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+	editor = vim
 [color "branch"]
 	current = yellow reverse
 	local = yellow
