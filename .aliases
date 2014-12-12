@@ -10,7 +10,7 @@ alias h="history"
 # programs
 alias st='open -a "Sublime Text 2"'
 # also/or do this:
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/bin/sublime
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 # alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
@@ -166,7 +166,6 @@ alias goagent="python ~/projects/goagent/local/proxy.py"
 # alibaba git config
 alias aligit="git config --global user.name '斯肯' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
 
-
 # apache config
 alias apacheconfig="sudo vim /etc/apache2/httpd.conf"
 alias apachestart="sudo apachectl start"
@@ -176,5 +175,6 @@ alias apacherestart="sudo apachectl restart"
 # hosts
 alias hosts="sudo vim /etc/hosts"
 
-# simulator
-alias iossimulator="open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app"
+# adb
+alias adb="~/Documents/android/sdk/platform-tools/adb"
+
