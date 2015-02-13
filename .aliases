@@ -10,7 +10,7 @@ alias h="history"
 # programs
 alias st='open -a "Sublime Text 2"'
 # also/or do this:
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
+#ln -s /Applications/Sublime\ Text 2.app/Contents/SharedSupport/bin/subl ~/bin/sublime
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 # alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
