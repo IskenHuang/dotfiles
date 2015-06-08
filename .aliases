@@ -10,7 +10,7 @@ alias h="history"
 # programs
 alias st='open -a "Sublime Text 2"'
 # also/or do this:
-#ln -s /Applications/Sublime\ Text 2.app/Contents/SharedSupport/bin/subl ~/bin/sublime
+#ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 # alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
@@ -165,10 +165,11 @@ alias ptt="ssh bbsu@ptt.cc"
 alias goagent="python ~/projects/goagent/local/proxy.py"
 
 # alibaba git config
-alias aligit="git config --global user.name '斯肯' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
+#alias aligit="git config --global user.name '斯肯' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
+alias aligit="git config --global user.name 'taicheng.htc' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
 alias alimail="open https://smartmail.alibaba-inc.com/alimail/"
 alias aliwork="open https://work.alibaba-inc.com/work/home"
-alias alibug="open http://k3.alibaba-inc.com/issue?companyId=0#filter/companyId=0|assignedToId=10021456|statusId=28+30+32"
+alias alibug="open http://k3.alibaba-inc.com/issue?projectId=40651769#filter/queryId=117787"
 alias twork="open http://work.tmall.net/"
 
 # apache config
