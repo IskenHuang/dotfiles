@@ -167,6 +167,7 @@ alias goagent="python ~/projects/goagent/local/proxy.py"
 # alibaba git config
 #alias aligit="git config --global user.name '斯肯' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
 alias aligit="git config --global user.name 'taicheng.htc' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
+alias mygit="git config --global user.name 'Isken Huang' && git config --global user.email 'iskenhuang@gmail.com'"
 alias alimail="open https://smartmail.alibaba-inc.com/alimail/"
 alias aliwork="open https://work.alibaba-inc.com/work/home"
 alias alibug="open http://k3.alibaba-inc.com/issue?projectId=40651769#filter/queryId=117787"
