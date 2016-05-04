@@ -164,15 +164,9 @@ alias ptt="ssh bbsu@ptt.cc"
 # GoAgent
 alias goagent="python ~/projects/goagent/local/proxy.py"
 
-# alibaba git config
-alias aligit="git config --global user.name 'taicheng.htc' && git config --global user.email 'taicheng.htc@alibaba-inc.com'"
-alias aligitlocal="git config user.name 'taicheng.htc' && git config user.email 'taicheng.htc@alibaba-inc.com'"
+# my git config
 alias mygit="git config --global user.name 'Isken Huang' && git config --global user.email 'iskenhuang@gmail.com'"
 alias mygitlocal="git config user.name 'Isken Huang' && git config user.email 'iskenhuang@gmail.com'"
-alias alimail="open https://smartmail.alibaba-inc.com/alimail/"
-alias aliwork="open https://work.alibaba-inc.com/work/home"
-alias alibug="open http://k3.alibaba-inc.com/issue?projectId=40651769#filter/queryId=117787"
-alias twork="open http://work.tmall.net/"
 
 # apache config
 alias apacheconfig="sudo vim /etc/apache2/httpd.conf"
