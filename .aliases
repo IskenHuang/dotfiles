@@ -178,7 +178,7 @@ alias apacherestart="sudo apachectl restart"
 alias hosts="sudo vim /etc/hosts"
 
 # android adb
-alias adb="~/Documents/android/sdk/platform-tools/adb"
+alias adb="~/Library/Android/sdk/platform-tools/adb"
 alias adv="ls -al ~/.android/avd"
 alias emulator="~/Documents/android/sdk/tools/emulator -avd"
 
