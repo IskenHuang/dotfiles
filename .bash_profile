@@ -35,4 +35,7 @@ export PATH=${PATH}:$HOME/gcutil-1.8.4
 
 # git
 git config --global user.name "Isken Huang"
-git config --global user.email "kensheep@gmail.com"
+git config --global user.email "iskenhuang@gmail.com"
+
+# Volume: make default volume be mute
+osascript -e 'set volume output volume 0'
