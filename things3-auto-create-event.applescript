@@ -22,8 +22,8 @@ on run argv
         repeat with todo in todos
             set myNote to notes of todo as text
 
-            set query to "" & "'> " & name of todo & "' " & completion date of todo as text
-            set title to "" & "'> " & name of todo & "' " & onDateString as text
+            set query to "" & "'>< " & name of todo & "' " & completion date of todo as text
+            set title to "" & "'>< " & name of todo & "' " & onDateString as text
 
             set calName to "Work" as text
             set myArea to area of todo
@@ -51,7 +51,7 @@ tell application "Things3"
 	set todos to to dos of list "Logbook"
 	set result to "" as text
 	repeat with todo in todos
-        set result to result & "" & "'> " & name of todo & "' " & completion date of todo & linefeed
+        set result to result & "" & "'>< " & name of todo & "' " & completion date of todo & linefeed
 	end repeat
     return result
 end tell
