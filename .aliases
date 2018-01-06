@@ -162,7 +162,7 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 alias ptt="ssh bbsu@ptt.cc"
 
 # GoAgent
-alias goagent="python ~/projects/goagent/local/proxy.py"
+#alias goagent="python ~/projects/goagent/local/proxy.py"
 
 # my git config
 alias mygit="git config --global user.name 'Isken Huang' && git config --global user.email 'iskenhuang@gmail.com'"
@@ -188,4 +188,7 @@ alias myip="ifconfig | awk '{ print $2}' | grep -E -o \"([0-9]{1,3}[\.]){3}[0-9]
 # mitmproxy
 alias mitmproxy="~/.mitmproxy/mitmproxy"
 alias mitmdump="~/.mitmproxy/mitmdump"
+
+# chrome
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
