@@ -34,7 +34,6 @@ add the below to this file: `~/Library/Application Support/Sublime Text 2/Packag
 <string>.bash_profile</string>
 <string>.bash_prompt</string>
 <string>.bashrc</string>
-<string>.brew</string>
 <string>.exports</string>
 <string>.functions</string>
 <string>.git</string>
@@ -76,7 +75,6 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 #### manual run
 * `install-deps.sh` - random apps i need installed
 * `.osx` - run on a fresh osx machine
-* `.brew` - homebrew intialization
 
 #### git, brah
 * `.git`
