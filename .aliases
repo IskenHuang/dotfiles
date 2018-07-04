@@ -5,8 +5,8 @@ alias h="history"
 
 # programs
 # also/or do this:
-#ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
-alias preview="open -a '$PREVIEW'"
+# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
+# alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
