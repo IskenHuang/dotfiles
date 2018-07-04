@@ -1,19 +1,13 @@
-# Easier navigation: .., ..., ~ and -
+# Easier navigation: .., ... and h
 alias ..="cd .."
 alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-#alias ~="cd ~" # `cd` is probably faster to type though
-#alias -- -="cd -"
 alias h="history"
 
 # programs
-alias st='open -a "Sublime Text 2"'
 # also/or do this:
 #ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
 alias preview="open -a '$PREVIEW'"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
-# alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
 # alias opera="open -a opera"
@@ -21,23 +15,14 @@ alias chrome="open -a google\ chrome"
 # alias chromium="open -a chromium"
 # alias dashcode="open -a dashcode"
 alias f='open -a Finder'
-# alias fireworks="open -a '/Applications/Adobe Fireworks CS6/Adobe Fireworks CS6.app'"
-alias photoshop="open -a '/Applications/Adobe Photoshop CS6/Adobe Photoshop.app'"
-# alias gpr="~/code/gpr $1"
 
+alias photoshop="open -a '/Applications/Adobe Photoshop CS6/Adobe Photoshop.app'"
 
 # general shortcuts
-alias pro="cd ~/projects"
-alias gh="open -a google\ chrome 'http://github.com/IskenHuang'"
-# alias bl="open -a google\ chrome 'http://browserling.com'"
+# alias gh="open -a google\ chrome 'http://github.com/IskenHuang'"
 
 # be nice
 alias please=sudo
-
-# handy things
-# alias bunyip='node ~/code/bunyip/cli.js'
-# alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
-
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -69,33 +54,11 @@ fi
 alias c='pygmentize -O style=monokai -f console256 -g'
 
 # GIT STUFF
-
-# Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
-
-
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
-# IP addresses
-# alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-# alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
-# npm
-alias npmp="sudo npm publish"
-alias npma="sudo npm adduser"
-alias npmi="sudo npm install"
-alias npmg="sudo npm install -g"
-alias npmu="sudo npm update"
-alias npmr="sudo npm uninstall"
-alias npmrg="sudo npm uninstall -g"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
@@ -115,7 +78,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 # Shortcuts
 # alias g="git"
-alias v="vim"
+# alias v="vim"
 
 # Git
 alias g="git"
@@ -142,12 +105,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-# Run DropboxUploader if you have it installed
-# alias dropbox="~/code/Dropbox-Uploader/dropbox_uploader.sh $1"
-
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-# alias plistbuddy="/usr/libexec/PlistBuddy"
-
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
@@ -155,24 +112,21 @@ done
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 10'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+# alias pumpitup="osascript -e 'set volume 10'"
+# alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # PTT
 alias ptt="ssh bbsu@ptt.cc"
-
-# GoAgent
-#alias goagent="python ~/projects/goagent/local/proxy.py"
 
 # my git config
 alias mygit="git config --global user.name 'Isken Huang' && git config --global user.email 'iskenhuang@gmail.com'"
 alias mygitlocal="git config user.name 'Isken Huang' && git config user.email 'iskenhuang@gmail.com'"
 
 # apache config
-alias apacheconfig="sudo vim /etc/apache2/httpd.conf"
-alias apachestart="sudo apachectl start"
-alias apachestop="sudo apachectl stop"
-alias apacherestart="sudo apachectl restart"
+# alias apacheconfig="sudo vim /etc/apache2/httpd.conf"
+# alias apachestart="sudo apachectl start"
+# alias apachestop="sudo apachectl stop"
+# alias apacherestart="sudo apachectl restart"
 
 # hosts
 alias hosts="sudo vim /etc/hosts"
@@ -190,7 +144,3 @@ alias ipinfo='curl ipinfo.io'
 # mitmproxy
 alias mitmproxy="~/.mitmproxy/mitmproxy"
 alias mitmdump="~/.mitmproxy/mitmdump"
-
-# chrome
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
