@@ -1,6 +1,6 @@
 # Isken's dotfiles
 
-This repo contains my personal dotfiles and are heavily based on [Addy](https://github.com/addyosmani/dotfiles)
+This repo contains my personal dotfiles and based on [Addy](https://github.com/addyosmani/dotfiles)
 
 ## Some differences
 * `ptt` quick connect PTT.cc(Taiwan famous forum)
@@ -23,33 +23,8 @@ PATH=$PATH:/bin
 export PATH
 ```
 
-## Syntax highlighting
-
-…is really important. even for these files.
-
-add the below to this file: `~/Library/Application Support/Sublime Text 2/Packages/ShellScript/Shell-Unix-Generic.tmLanguage`
-
-```xml
-<string>.aliases</string>
-<string>.bash_profile</string>
-<string>.bash_prompt</string>
-<string>.bashrc</string>
-<string>.exports</string>
-<string>.functions</string>
-<string>.git</string>
-<string>.gitattributes</string>
-<string>.gitconfig</string>
-<string>.gitignore</string>
-<string>.inputrc</string>
-<string>.osx</string>
-<string>.vim</string>
-<string>.vimrc</string>
-```
-
-
 
 ### Sensible OS X defaults
-
 When setting up a new Mac, you may want to set some sensible OS X defaults:
 
 ```bash
