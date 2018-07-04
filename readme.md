@@ -3,21 +3,12 @@
 This repo contains my personal dotfiles and are heavily based on [Addy](https://github.com/addyosmani/dotfiles)
 
 ## Some differences
-
-* ~~Browserstack shortcuts which will launch the service and automatically load up a specific OS/Browser pair with your URL. e.g `win7ie8 "http://google.com"`, `ipad3 "http://google.com"`, `ipad3ios6 "http://google.com"`,`androidnexus "http://google.com"` etc. If you would prefer to work locally similarly use `ipad3 "http://localhost:3000"`~~
-* ~~Dropbox via the command-line support `dropbox upload {localFile} {remoteFile}`, `dropbox download {remoteFile} {localFile}`, `dropbox list` etc.~~
-* Browser and npm aliases e.g `chrome`, `safari`, `opera`, `firefox`, `chromium` and others.
-* Launch all browsers with a specific URL `browsers "http://google.com"`
-* ~~My Sublime Text build files (Grunt, Yeoman, r.js, SASS, Less and a few others included)~~
-* ~~[@cowboy](http://github.com/cowboy)'s GitHub Pull Request Helper~~
 * `ptt` quick connect PTT.cc(Taiwan famous forum)
 
 ## install the neccessary apps
-
 My basic setup is captured in `install-deps.sh` which adds homebrew, nvm etc.
 
 ## private config
-
 Toss it into a file called `.extra` which you do not commit to this repo and just keep in your `~/`
 
 I do something nice with my `PATH` there:
@@ -27,7 +18,6 @@ I do something nice with my `PATH` there:
       PATH=/opt/local/bin
 PATH=$PATH:/opt/local/sbin
 PATH=$PATH:/bin
-PATH=$PATH:~/code/git-friendly
 # ...
 
 export PATH
@@ -67,18 +57,11 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-## Similar projects
-
-I recommend getting a [`.jshintrc`](https://github.com/jshint/node-jshint/blob/master/.jshintrc) and ~~[`.editorconfig`](http://editorconfig.org/)~~ defined for all your projects.
-
-
-
 
 
 ## overview of files
 
 ####  Automatic config
-* ~~`.ackrc` - for ack (better than grep)~~
 * `.vimrc`, `.vim` - vim config, obv.
 
 #### shell environement
@@ -100,7 +83,6 @@ I recommend getting a [`.jshintrc`](https://github.com/jshint/node-jshint/blob/m
 * `.gitattributes`
 * `.gitconfig`
 * `.gitignore`
-
 * `.inputrc` - config for bash readline
 
 
