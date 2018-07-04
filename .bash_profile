@@ -31,7 +31,7 @@ complete -W "NSGlobalDomain" defaults
 # Google Compute Engine
 # gcutil Tool
 # https://developers.google.com/compute/docs/gcutil/
-export PATH=${PATH}:$HOME/gcutil-1.8.4
+# export PATH=${PATH}:$HOME/gcutil-1.8.4
 
 # git
 git config --global user.name "Isken Huang"
