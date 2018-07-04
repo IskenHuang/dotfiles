@@ -16,7 +16,6 @@ alias chrome="open -a google\ chrome"
 # alias dashcode="open -a dashcode"
 alias f='open -a Finder'
 
-alias photoshop="open -a '/Applications/Adobe Photoshop CS6/Adobe Photoshop.app'"
 
 # general shortcuts
 # alias gh="open -a google\ chrome 'http://github.com/IskenHuang'"
@@ -35,7 +34,6 @@ fi
 alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
 alias ll="ls -la ${colorflag}"
 
 # List only directories
@@ -52,10 +50,6 @@ fi
 # `cat` with beautiful colors. requires Pygments installed.
 # 							   sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
-
-# GIT STUFF
-# git root
-alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
@@ -80,7 +74,7 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 # alias g="git"
 # alias v="vim"
 
-# Git
+# GIT STUFF
 alias g="git"
 alias gs="git status"
 alias gm="git commit -m"
@@ -110,10 +104,6 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "$method"="lwp-request -m '$method'"
 done
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-# alias pumpitup="osascript -e 'set volume 10'"
-# alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # PTT
 alias ptt="ssh bbsu@ptt.cc"
