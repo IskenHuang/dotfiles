@@ -10,29 +10,7 @@
 # you need the code CLI tools YOU FOOL.
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
 # nvm
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 # . ~/.nvm/nvm.sh
-
-# https://github.com/rupa/z
-# z, oh how i love you
-# mkdir -p ~/code/z
-# curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
-# chmod +x ~/code/z/z.sh
-
-# add this to the bash_profile file if it aint there.
-#   . ~/code/z/z.sh
-
-
-# my magic photobooth symlink -> dropbox. I love it.
-# first move Photo Booth folder out of Pictures and into dropbox/public
-# then:
-# ln -s ~/Dropbox/Public/Photo\ Booth/ ~/Pictures/Photo\ Booth
-# now you can record photobooth videos quickly and they upload to dropbox DURING RECORDING
-# then you grab public URL and send off your video message in a heartbeat.
-
-
-# chrome canary as default
-# on a mac you can set chrome canary as your default inside of Safari preferences :)
 
