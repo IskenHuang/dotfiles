@@ -1,14 +1,7 @@
-# Create a new directory and enter it
-function md() {
-	mkdir -p "$@" && cd "$@"
-}
-
-
 # find shorthand
 function f() {
     find . -name "$1"
 }
-
 
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
@@ -26,54 +19,6 @@ function server() {
 	fi
 }
 
-# git log with per-commit cmd-clickable GitHub URLs (iTerm)
-# function gf() {
-#   local remote="$(git remote -v | awk '/^origin.*\(push\)$/ {print $2}')"
-#   [[ "$remote" ]] || return
-#   local user_repo="$(echo "$remote" | perl -pe 's/.*://;s/\.git$//')"
-#   git log $* --name-status --color | awk "$(cat <<AWK
-#     /^.*commit [0-9a-f]{40}/ {sha=substr(\$2,1,7)}
-#     /^[MA]\t/ {printf "%s\thttps://github.com/$user_repo/blob/%s/%s\n", \$1, sha, \$2; next}
-#     /.*/ {print \$0}
-# AWK
-#   )" | less -F
-# }
-
-
-# Copy w/ progress
-cp_p () {
-  rsync -WavP --human-readable --progress $1 $2
-}
-
-
-# Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
-# Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
-function httpcompression() {
-	encoding="$(curl -LIs -H 'User-Agent: Mozilla/5 Gecko' -H 'Accept-Encoding: gzip,deflate,compress,sdch' "$1" | grep '^Content-Encoding:')" && echo "$1 is encoded using ${encoding#* }" || echo "$1 is not using any encoding"
-}
-
-# Syntax-highlight JSON strings or files
-function json() {
-	if [ -p /dev/stdin ]; then
-		# piping, e.g. `echo '{"foo":42}' | json`
-		python -mjson.tool | pygmentize -l javascript
-	else
-		# e.g. `json '{"foo":42}'`
-		python -mjson.tool <<< "$*" | pygmentize -l javascript
-	fi
-}
-
-# prune a set of empty directories
-function prunedir () {
-   find $* -type d -empty -print0 | xargs -0r rmdir -p ;
-}
-
-# take this repo and copy it to somewhere else minus the .git stuff.
-function gitexport(){
-	mkdir -p "$1"
-	git archive master | tar -x -C "$1"
-}
-
 # get gzipped size
 function gz() {
 	echo "orig size    (bytes): "
@@ -88,35 +33,24 @@ function digga() {
 }
 
 # Escape UTF-8 characters into their 3-byte format
-function escape() {
-	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
-	echo # newline
-}
+#function escape() {
+#	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
+#	echo # newline
+#}
 
 # Decode \x{ABCD}-style Unicode escape sequences
-function unidecode() {
-	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
-	echo # newline
-}
-
-
-
-# Launch installed browsers for a specific URL
-# Usage: browsers "http://www.google.com"
-function browsers(){
-	chrome $1
-	opera $1
-	firefox $1
-	safari $1
-}
+#function unidecode() {
+#	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
+#	echo # newline
+#}
 
 # For local server running on apache with ssl as staging.example.com and https://staging.example.com
 # Usage: ipad3 "http://staging.example.com" "staging.example.com,80,0,staging.example.com,443,1", win7ie8 "http://staging.example.com" "staging.example.com,80,0,staging.example.com,443,1" etc.
 
-function openurl(){
-	if [ $2 ]
-	then
-	  url=$1"&host_ports=$2"
-	fi
-	open -a google\ chrome ${url}
-}
+#function openurl(){
+#	if [ $2 ]
+#	then
+#	  url=$1"&host_ports=$2"
+#	fi
+#	open -a google\ chrome ${url}
+#}
