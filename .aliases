@@ -5,20 +5,12 @@ alias h="history"
 
 # programs
 # also/or do this:
-# ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
-# alias preview="open -a '$PREVIEW'"
 #alias xcode="open -a '/Developer/Applications/Xcode.app'"
 #alias safari="open -a safari"
 #alias firefox="open -a firefox"
 # alias opera="open -a opera"
 #alias chrome="open -a google\ chrome"
 # alias chromium="open -a chromium"
-# alias dashcode="open -a dashcode"
-#alias f='open -a Finder'
-
-
-# be nice
-#alias please=sudo
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -32,6 +24,7 @@ alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias ll="ls -la ${colorflag}"
+alias llh="ls -alh ${colorflag}"
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -49,9 +42,6 @@ type -t md5sum > /dev/null || alias md5sum="md5"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
-# Shortcuts
-# alias v="vim"
 
 # GIT STUFF
 alias g="git"
