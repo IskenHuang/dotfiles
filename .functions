@@ -54,3 +54,10 @@ function digga() {
 #	fi
 #	open -a google\ chrome ${url}
 #}
+
+function scanRemote() {
+	echo "Scan start - ${1} | regexp:: ${2}"
+	# -A "UA HERE"
+	curl -v --silent $1 2>&1 | grep -E $2 | wc -l
+	echo "Scan finished"
+}
