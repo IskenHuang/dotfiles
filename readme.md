@@ -1,9 +1,9 @@
 # Isken's dotfiles
-
 This repo contains my personal dotfiles and based on [Addy](https://github.com/addyosmani/dotfiles)
 
 ## Some differences
 * `ptt` quick connect PTT.cc(Taiwan famous forum)
+* added linux support
 
 ## install the neccessary apps
 My basic setup is captured in `install-deps.sh` which adds homebrew, nvm etc.
