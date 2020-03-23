@@ -1,3 +1,6 @@
+# check is mac
+export __MAC_VERSION="$(sw_vers -productName 2> /dev/null)"
+
 # Make vim the default editor
 export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page

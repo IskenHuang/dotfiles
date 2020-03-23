@@ -2,10 +2,9 @@
 cd "$(dirname "$0")"
 #git pull
 function doIt() {
-	MAC_VERSION="$(sw_vers -productName 2> /dev/null)"
 	# todo: refect it
-	if [$MAC_VERSION === "Mac OS X" ]; then
-		if [ $SHELL === "/bin/zsh" ]; then
+	if [ ! -z "$__MAC_VERSION" ]; then
+		if [ $SHELL == "/bin/zsh" ]; then
 			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "README.md" --exclude "readme.md" --exclude "install-deps.sh" -av . ~
 		else
 			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "README.md" --exclude "readme.md" --exclude "install-deps.sh" --exclude ".zshrc" -av . ~
@@ -26,7 +25,7 @@ function doIt() {
 #	fi
 #fi
 unset doIt
-if [ $SHELL === "/bin/zsh" ]; then
+if [ $SHELL == "/bin/zsh" ]; then
 	source ~/.zshrc
 else
 	source ~/.bash_profile

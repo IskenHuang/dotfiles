@@ -91,8 +91,7 @@ alias ipinfo='curl ipinfo.io'
 alias lifehacker=". ~/project/lifehacker/start.sh"
 
 # MAC ONLY
-MAC_VERSION=$(sw_vers -productName 2> /dev/null)
-if [$MAC_VERSION === "Mac OS X" ]; then
+if [ ! -z "$__MAC_VERSION" ]; then
 	# js core for macos
 	alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
 
