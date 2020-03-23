@@ -26,7 +26,7 @@ export LANG="en_US"
 git config --global user.name "Isken Huang"
 git config --global user.email "iskenhuang@gmail.com"
 
-if [$__MAC_VERSION === "Mac OS X" ]; then
+if [ ! -z "$__MAC_VERSION" ]; then
 	# Volume: make default volume be mute
 	osascript -e 'set volume output volume 0'
-}
+fi
