@@ -25,6 +25,7 @@ alias l="ls -l ${colorflag}"
 # List all files colorized in long format, including dot files
 alias ll="ls -la ${colorflag}"
 alias llh="ls -alh ${colorflag}"
+alias dusort="du | sort -nr | cut -f2- | xargs du -hs"
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
