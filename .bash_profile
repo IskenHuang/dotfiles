@@ -23,8 +23,14 @@ export LANG="en_US"
 # complete -W "NSGlobalDomain" defaults #zsh not support
 
 # git
-git config --global user.name "Isken Huang"
-git config --global user.email "iskenhuang@gmail.com"
+local IS_WORK=$(echo $HOST | grep work)
+if [[ ${#IS_WORK} > 0 ]]; then
+	git config --global user.name $GIT_WORK_NAME
+	git config --global user.email $GIT_WORK_EMAIL
+else
+	git config --global user.name "Isken Huang"
+	git config --global user.email "iskenhuang@gmail.com"
+fi
 
 if [ ! -z "$__MAC_VERSION" ]; then
 	# Volume: make default volume be mute
