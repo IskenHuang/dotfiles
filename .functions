@@ -32,29 +32,6 @@ function digga() {
 	dig +nocmd "$1" any +multiline +noall +answer
 }
 
-# Escape UTF-8 characters into their 3-byte format
-#function escape() {
-#	printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u)
-#	echo # newline
-#}
-
-# Decode \x{ABCD}-style Unicode escape sequences
-#function unidecode() {
-#	perl -e "binmode(STDOUT, ':utf8'); print \"$@\""
-#	echo # newline
-#}
-
-# For local server running on apache with ssl as staging.example.com and https://staging.example.com
-# Usage: ipad3 "http://staging.example.com" "staging.example.com,80,0,staging.example.com,443,1", win7ie8 "http://staging.example.com" "staging.example.com,80,0,staging.example.com,443,1" etc.
-
-#function openurl(){
-#	if [ $2 ]
-#	then
-#	  url=$1"&host_ports=$2"
-#	fi
-#	open -a google\ chrome ${url}
-#}
-
 function scanRemote() {
 	echo "Scan start - ${1} | regexp:: ${2}"
 	# -A "UA HERE"
