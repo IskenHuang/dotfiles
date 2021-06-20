@@ -69,12 +69,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 # PTT
 alias ptt="ssh bbsu@ptt.cc"
 
-# apache config
-# alias apacheconfig="sudo vim /etc/apache2/httpd.conf"
-# alias apachestart="sudo apachectl start"
-# alias apachestop="sudo apachectl stop"
-# alias apacherestart="sudo apachectl restart"
-
 # hosts
 alias hosts="sudo vim /etc/hosts"
 
