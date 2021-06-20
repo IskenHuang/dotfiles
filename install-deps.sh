@@ -3,7 +3,7 @@
 # homebrew! only install on mac
 # you need the code CLI tools YOU FOOL.
 if [ ! -z "$__MAC_VERSION" ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # nvm
