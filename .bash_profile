@@ -13,7 +13,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # git
-local IS_WORK=$(echo $HOST | grep work)
+export IS_WORK=$(echo $HOST $USER | grep -E "work|bytedance")
 if [[ ${#IS_WORK} > 0 ]]; then
 	git config --global user.name $GIT_WORK_NAME
 	git config --global user.email $GIT_WORK_EMAIL
