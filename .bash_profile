@@ -1,6 +1,6 @@
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+for file in ~/.{extra,functions,install-deps,bash_prompt,exports,aliases}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -22,7 +22,7 @@ else
 	git config --global user.email "iskenhuang@gmail.com"
 fi
 
-if [ ! -z "$__MAC_VERSION" ]; then
+if [[ ! -z "$__MAC_VERSION" && ${#$IS_WORK} > 0]]; then
 	# Volume: make default volume be mute
 	osascript -e 'set volume output volume 0'
 fi
