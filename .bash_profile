@@ -1,6 +1,6 @@
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,functions,install-deps,bash_prompt,exports,aliases}; do
+for file in ~/.{extra,functions,bash_prompt,exports,aliases}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -13,7 +13,6 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # git
-export IS_WORK=$(echo $HOST $USER | grep -E "work|bytedance")
 if [[ ${#IS_WORK} > 0 ]]; then
 	git config --global user.name $GIT_WORK_NAME
 	git config --global user.email $GIT_WORK_EMAIL

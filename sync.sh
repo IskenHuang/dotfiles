@@ -30,3 +30,7 @@ if [ $SHELL == "/bin/zsh" ]; then
 else
 	source ~/.bash_profile
 fi
+
+# install deps
+source install-deps.sh
+source .osx
