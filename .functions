@@ -48,6 +48,14 @@ function checkFile() {
 	done
 }
 
+function checkFileOne() {
+	if [[ ${#$(checkFile $1)} > 0 ]]; then
+		echo "false"
+	else
+		echo "true"
+	fi
+}
+
 function checkCmd() {
 	for CMD in ${@}
 	do
@@ -56,4 +64,13 @@ function checkCmd() {
 			echo "$CMD" not found
 		fi
 	done
+}
+
+
+function checkCmdOne() {
+	if [[ ${#$(checkCmd $1)} > 0 ]]; then
+		echo "false"
+	else
+		echo "true"
+	fi
 }
