@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # up to you (me) if you want to run this as a file or copy paste at your leisure
 
 # homebrew! only install on mac
@@ -23,7 +25,6 @@ if [[ ! -z "$__MAC_VERSION" ]]; then
         echo "mas is not installed!"
     fi
 fi
-
 
 # nvm
 if [[ $(checkCmdOne nvm) == "false" ]]; then
