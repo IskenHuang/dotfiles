@@ -38,3 +38,22 @@ function scanRemote() {
 	curl -v --silent $1 2>&1 | grep -E $2 | wc -l
 	echo "Scan finished"
 }
+
+function checkFile() {
+	for FILE in ${@}
+	do
+		if [[ ! -f $FILE ]]; then
+			echo "The file ${FILE} does not exist!"
+		fi
+	done
+}
+
+function checkCmd() {
+	for CMD in ${@}
+	do
+		if ! command -v $CMD &> /dev/null
+		then
+			echo "$CMD" not found
+		fi
+	done
+}
