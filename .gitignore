@@ -15,4 +15,4 @@ Thumbs.db
 
 # for private variable
 .extra
-install-deps-work.sh
+*extra*
