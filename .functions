@@ -74,3 +74,12 @@ function checkCmdOne() {
 		echo "true"
 	fi
 }
+
+function appendPATH() {
+	if grep -q "$1" <<< "$PATH"; then
+    	echo "in list"
+	else
+    	echo "NOT in list"
+    	export PATH=$1:$PATH
+	fi
+}
