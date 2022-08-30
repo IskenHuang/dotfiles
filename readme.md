@@ -9,20 +9,7 @@ This repo contains my personal dotfiles and based on [Addy](https://github.com/a
 My basic setup is captured in `install-deps.sh` which adds homebrew, nvm etc.
 
 ## private config
-Toss it into a file called `.extra` which you do not commit to this repo and just keep in your `~/`
-
-I do something nice with my `PATH` there:
-
-```shell
-# PATH like a bawss
-      PATH=/opt/local/bin
-PATH=$PATH:/opt/local/sbin
-PATH=$PATH:/bin
-# ...
-
-export PATH
-```
-
+Toss it into a file called `.extra` or `*extra*` which you do not commit to this repo and just keep in your `~/`
 
 ### Sensible OS X defaults
 When setting up a new Mac, you may want to set some sensible OS X defaults:
