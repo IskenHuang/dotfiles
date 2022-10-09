@@ -17,12 +17,12 @@ fi
 
 # install app from macos app store
 if [[ ! -z "$__MAC_VERSION" ]]; then
-    if [[ $(checkCmdOne mas) == "false" ]]; then
+    if [[ "$(checkCmdOne mas)" == "false" ]]; then
+        echo "mas is not installed!"
+    else
         mas install 1091189122 #Bear
         mas install 904280696  #Things3
         # mas install 975937182  #Fantastical
-    else
-        echo "mas is not installed!"
     fi
 fi
 

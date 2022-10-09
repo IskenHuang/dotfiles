@@ -24,7 +24,7 @@ else
 	git config --global user.email "iskenhuang@gmail.com"
 fi
 
-if [[ ! -z "$__MAC_VERSION" && ${#$IS_WORK} > 0]]; then
+if [[ (! -z "$__MAC_VERSION") && ${#IS_WORK} > 0 ]]; then
 	# Volume: make default volume be mute
 	osascript -e 'set volume output volume 0'
 fi
