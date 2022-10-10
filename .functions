@@ -64,7 +64,7 @@ function checkFileOne() {
 function checkCmd() {
 	for CMD in ${@}
 	do
-		if [[ ! command -v $CMD &> /dev/null ]]; then
+		if [ ! command -v $CMD &> /dev/null ]; then
 			echo "$CMD" not found
 		fi
 	done
@@ -74,6 +74,24 @@ function checkCmd() {
 function checkCmdOne() {
 	local k="$(checkCmd $1)"
 	if [[ $k == "" ]]; then
+		echo "true"
+	else
+		echo "false"
+	fi
+}
+
+function isMac() {
+	local _MAC_VERSION="$(sw_vers -productName 2> /dev/null)"
+	if [[ $_MAC_VERSION == "" ]]; then
+		echo "false"
+	else
+		echo "true"
+	fi
+}
+
+function isWork() {
+	local IS_WORK=$(echo $HOST $USER | grep -E "work|bytedance")
+	if [[ ${#IS_WORK} > 0 ]]; then
 		echo "true"
 	else
 		echo "false"

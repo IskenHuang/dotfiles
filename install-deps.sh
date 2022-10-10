@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # homebrew! only install on mac
-if [[ ! -z "$__MAC_VERSION" && $(checkCmdOne brew) == "false" ]]; then
+if [[ $(isMac) == "true" && $(checkCmdOne brew) == "false" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # install useful apps/cmds
@@ -13,7 +13,7 @@ if [[ ! -z "$__MAC_VERSION" && $(checkCmdOne brew) == "false" ]]; then
 fi
 
 # install app from macos app store
-if [[ ! -z "$__MAC_VERSION" ]]; then
+if [[ $(isMac) == "true" ]]; then
     if [[ "$(checkCmdOne mas)" == "false" ]]; then
         echo "mas is not installed!"
     else

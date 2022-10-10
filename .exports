@@ -1,9 +1,3 @@
-# check is mac
-export __MAC_VERSION="$(sw_vers -productName 2> /dev/null)"
-
-# check is work computer
-export IS_WORK=$(echo $HOST $USER | grep -E "work|bytedance")
-
 # Make vim the default editor
 export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page

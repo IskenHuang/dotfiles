@@ -16,7 +16,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # git
-if [[ ${#IS_WORK} > 0 ]]; then
+if [[ $(isWork) == "true" ]]; then
 	git config --global user.name $GIT_WORK_NAME
 	git config --global user.email $GIT_WORK_EMAIL
 else
@@ -24,7 +24,7 @@ else
 	git config --global user.email "iskenhuang@gmail.com"
 fi
 
-if [[ (! -z "$__MAC_VERSION") && ${#IS_WORK} > 0 ]]; then
+if [[ $(isMac) == "true" && $(isWork) == "true" ]]; then
 	# Volume: make default volume be mute
 	osascript -e 'set volume output volume 0'
 fi
