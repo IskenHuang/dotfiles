@@ -9,15 +9,20 @@ function server() {
 	local ip="$(ifconfig en0 | grep inet | grep -v inet6 | awk '{print $2}')"
 	open "http://${ip}:${port}/"
 
-	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-	if [ $port -eq "80" ]
-	then
-		sudo python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+	local ispy3="$(checkCmdOne python3)"
+	if [[ $ispy3 == "true" ]]; then
+		python3 -m http.server "$port"
 	else
-		python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+		# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
+		# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
+		if [[ $port == "80" ]]; then
+			sudo python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+		else
+			python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
+		fi
 	fi
 }
+
 
 # get gzipped size
 function gz() {
@@ -59,8 +64,7 @@ function checkFileOne() {
 function checkCmd() {
 	for CMD in ${@}
 	do
-		if ! command -v $CMD &> /dev/null
-		then
+		if [[ ! command -v $CMD &> /dev/null ]]; then
 			echo "$CMD" not found
 		fi
 	done
@@ -68,18 +72,10 @@ function checkCmd() {
 
 
 function checkCmdOne() {
-	if [[ ${#$(checkCmd $1)} > 0 ]]; then
-		echo "false"
-	else
+	local k="$(checkCmd $1)"
+	if [[ $k == "" ]]; then
 		echo "true"
-	fi
-}
-
-function appendPATH() {
-	if grep -q "$1" <<< "$PATH"; then
-    	echo "in list"
 	else
-    	echo "NOT in list"
-    	export PATH=$1:$PATH
+		echo "false"
 	fi
 }
