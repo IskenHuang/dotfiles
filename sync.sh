@@ -5,9 +5,9 @@ function doIt() {
 	# todo: refect it
 	if [[ $(isMac) == "true" ]]; then
 		if [[ $SHELL == "/bin/zsh" ]]; then
-			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "*.md" --exclude "install-deps*" --exclude "*extra*" -av . ~
+			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude ".osx" --exclude "*.md" --exclude "install-deps*" --exclude "*extra*" -av . ~
 		else
-			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "*.md" --exclude "install-deps*" --exclude "*extra*" --exclude ".zshrc" -av . ~
+			rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude ".osx" --exclude "*.md" --exclude "install-deps*" --exclude "*extra*" --exclude ".zshrc" -av . ~
 		fi
 	else
 		rsync --exclude ".git/" --exclude ".DS_Store" --exclude "sync.sh" --exclude "*.md" --exclude "install-deps*" --exclude "*extra*" --exclude "osx.sh" -av . ~
