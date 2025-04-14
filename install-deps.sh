@@ -34,14 +34,6 @@ if [[ $(checkCmdOne nvm) == "false" ]]; then
     nvm install --lts
 fi
 
-# gvm (Go version management)
-#if [[ $(checkCmdOne gvm) == "false" ]]; then
-#    bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-#
-#    # init gvm
-#    source ~/.gvm/scripts/gvm
-#fi
-
 if [[ $(checkFileOne "./install-deps-extra.sh") == "true" ]]; then
     . ./install-deps-extra.sh
 fi
