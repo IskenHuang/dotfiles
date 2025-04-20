@@ -90,7 +90,7 @@ function isMac() {
 }
 
 function isWork() {
-	local IS_WORK=$(echo $HOST $USER | grep -E "work|bytedance")
+	local IS_WORK=$(echo $(hostname) $HOST $USER | grep -E "work|bytedance")
 	if [[ ${#IS_WORK} > 0 ]]; then
 		echo "true"
 	else
