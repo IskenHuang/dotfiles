@@ -24,4 +24,5 @@ fi
 if [[ $(isMac) == "true" && $(isWork) == "true" ]]; then
 	# Volume: make default volume be mute
 	osascript -e 'set volume output volume 0'
+	osascript -e 'set volume input volume 0'
 fi
